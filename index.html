@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>★☆ ようこそ！！ナンシーのホームページへ ☆★</title>
+    <title>★☆ ようこそ！！むなかたのホームページへ ☆★</title>
     <style>
         body {
             background: #000080;
@@ -93,18 +93,120 @@
             font-weight: bold;
             text-shadow: 2px 2px 4px #000000;
         }
+        
+        .hidden-link {
+            color: #000080;
+            text-decoration: none;
+        }
+        
+        .hidden-link::selection {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .gif-decoration {
+            display: inline-block;
+            margin: 0 5px;
+        }
+        
+        .bbs-section {
+            background: #008080;
+            border: 3px outset #00FFFF;
+            color: #FFFFFF;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .guestbook-section {
+            background: #800000;
+            border: 3px inset #FF6666;
+            color: #FFFF99;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .webring-section {
+            background: #004080;
+            border: 2px solid #0080FF;
+            color: #FFFFFF;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: center;
+        }
+        
+        .weather-widget {
+            background: #404040;
+            border: 2px inset #C0C0C0;
+            color: #FFFF00;
+            padding: 8px;
+            margin: 10px 0;
+            font-size: 11px;
+        }
+        
+        .ticker {
+            background: #000000;
+            color: #00FF00;
+            border: 1px solid #00FF00;
+            padding: 5px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        .ticker-content {
+            display: inline-block;
+            animation: scroll-left 20s linear infinite;
+        }
+        
+        @keyframes scroll-left {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        .deputy-admin {
+            background: #660066;
+            border: 2px dashed #FF00FF;
+            color: #FFCCFF;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: center;
+        }
+        
+        table {
+            border-collapse: separate;
+            border-spacing: 2px;
+        }
+        
+        td {
+            padding: 8px;
+            vertical-align: top;
+        }
     </style>
 </head>
 <body>
+    <!-- MIDI Background Music -->
+    <embed src="data:audio/midi;base64,TVRoZAAAAAYAAAABAIBNVHJrAAAAFgD/UQMHoSAA/1gEBAIYCID/LwA=" autostart="true" loop="true" hidden="true" width="0" height="0">
+    
     <div class="center">
-        <h1 class="title blink">★☆ ようこそ！！ナンシーのホームページへ ☆★</h1>
-        <img src="data:image/gif;base64,R0lGODlhZABkAPcAAAAAADMzMzNmZjOZmTPMzDNmMzNmZjNmmTNmzDOZMzOZZjOZmTOZzDPMMzPMZjPMmTPMzGYzAGYzM2YzZmYzmWYzzGZmAGZmM2ZmZmZmmWZmzGaZAGaZM2aZZmaZmWaZzGbMAGbMM2bMZmbMmWbMzJkzAJkzM5kzZpkzmZkzzJlmAJlmM5lmZplmmZlmzJmZAJmZM5mZZpmZmZmZzJnMAJnMM5nMZpnMmZnMzMwzAMwzM8wzZswzmcwzzMxmAMxmM8xmZsxmmcxmzMyZAMyZM8yZZsyZmcyZzMzMAMzMM8zMZszMmczMzP///////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAkKAP8ALAAAAABkAGQAAAj/AP8JHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3Mixo8ePIEOKHEmypMmTKFOqXMmypcuXMGPKnEmzps2bOHPq3Mmzp8+fQIMKHUq0qNGjSJMqXcq0qdOnUKNKnUq1qtWrWLNq3cq1q9evYMOKHUu2rNmzaNOqXcu2rdu3cOPKnUu3rt27ePPq3cu3r9+/gAMLHky4sOHDiBMrXsy4sePHkCNLnky5suXLmDNr3sy5s+fPoEOLHk26tOnTqFOrXs26tevXsGPLnk27tu3buHPr3s27t+/fwIMLH068uPHjyJMrX868ufPn0KNLn069uvXr2LNr3869u/fv4MOL/x9Pvrz58+jTq1/Pvr379/Djy59Pv779+/jz69/Pv7///wAGKOCABBZo4IEIJqjgggw26OCDEEYo4YQUVmjhhRhmqOGGHHbo4YcghijiiCSWaOKJKKao4oostujiizDGKOOMNNZo44045qjjjjz26OOPQAYp5JBEFmnkkUgmqeSSTDbp5JNQRinllFRWaeWVWGap5ZZcdunll2CGKeaYZJZp5plopqnmmmy26eabcMYp55x01mnnnXjmqeeefPbp55+ABirooIQWauihiCaq6KKMNuroo5BGKumklFZq6aWYZqrpppx26umnoIYq6qiklmrqqaimquqqrLbq6quwxirrrLTWauutuOaq66689urrr8AGK+ywxBZr7LHIJqvsssw26+yz0EYr7bTUVmvttdhmq+223Hbr7bfghivuuOSWa+656Kar7rrstuvuu/DGK++89NZr77345qvvvvz26++/AAcs8MAEF2zwwQgnrPDCDDfs8MMQRyzxxBRXbPHFGGes8cYcd+zxxyCHLPLIJJds8skop6zyyiy37PLLMMcs88w012zzzTjnrPPOPPfs889ABy300EQXbfTRSCet9NJMN+3001BHLfXUVFdt9dVYZ6311lx37fXXYIct9thkl2322WinrfbabLft9ttwxy333HTXbffdeOet99589+3334AHLvjghBdu+OGIJ6744ow37vjjkEcu+eSUV2755ZhnrvnmnHfu+eeghy766KSXbvrpqKeu+uqst+7667DHLvvstNdu++2456777rz37vvvwAcv/PDEF2/88cgnr/zyzDfv/PPQRy/99NRXb/312Gev/fbcd+/99+CHL/745Jdv/vnop6/++uy37/778Mcv//z012///fjnr//+/Pfv//8BCzCA");
+        <img src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH+GkNyZWF0ZWQgd2l0aCBhamF4bG9hZC5pbmZvACH5BAAKAAAAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQACgABACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7QEYB4Ag1xjihkMZsiUkKhIAIfkEAAoAAgAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GURBhBinm/8jTmn6cLE8BQOEYvIKHwUKgm8YKDFgMlMMlckAACH5BAAKAAMALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" class="gif-decoration">
+        <h1 class="title blink">★☆ ようこそ！！むなかたのホームページへ ☆★</h1>
+        <img src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH+GkNyZWF0ZWQgd2l0aCBhamF4bG9hZC5pbmZvACH5BAAKAAAAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQACgABACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7QEYB4Ag1xjihkMZsiUkKhIAIfkEAAoAAgAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GURBhBinm/8jTmn6cLE8BQOEYvIKHwUKgm8YKDFgMlMMlckAACH5BAAKAAMALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" class="gif-decoration">
+        <br>
+        <img src="data:image/gif;base64,R0lGODlhZABkAPcAAAAAADMzMzNmZjOZmTPMzDNmMzNmZjNmmTNmzDOZMzOZZjOZmTOZzDPMMzPMZjPMmTPMzGYzAGYzM2YzZmYzmWYzzGZmAGZmM2ZmZmZmmWZmzGaZAGaZM2aZZmaZmWaZzGbMAGbMM2bMZmbMmWbMzJkzAJkzM5kzZpkzmZkzzJlmAJlmM5lmZplmmZlmzJmZAJmZM5mZZpmZmZmZzJnMAJnMM5nMZpnMmZnMzMwzAMwzM8wzZswzmcwzzMxmAMxmM8xmZsxmmcxmzMyZAMyZM8yZZsyZmcyZzMzMAMzMM8zMZszMmczMzP///////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAkKAP8ALAAAAABkAGQAAAj/AP8JHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3Mixo8ePIEOKHEmypMmTKFOqXMmypcuXMGPKnEmzps2bOHPq3Mmzp8+fQIMKHUq0qNGjSJMqXcq0qdOnUKNKnUq1qtWrWLNq3cq1q9evYMOKHUu2rNmzaNOqXcu2rdu3cOPKnUu3rt27ePPq3cu3r9+/gAMLHky4sOHDiBMrXsy4sePHkCNLnky5suXLmDNr3sy5s+fPoEOLHk26tOnTqFOrXs26tevXsGPLnk27tu3buHPr3s27t+/fwIMLH068uPHjyJMrX868ufPn0KNLn069uvXr2LNr3869u/fv4MOL/x9Pvrz58+jTq1/Pvr379/Djy59Pv779+/jz69/Pv7///wAGKOCABBZo4IEIJqjgggw26OCDEEYo4YQUVmjhhRhmqOGGHHbo4YcghijiiCSWaOKJKKao4oostujiizDGKOOMNNZo44045qjjjjz26OOPQAYp5JBEFmnkkUgmqeSSTDbp5JNQRinllFRWaeWVWGap5ZZcdunll2CGKeaYZJZp5plopqnmmmy26eabcMYp55x01mnnnXjmqeeefPbp55+ABirooIQWauihiCaq6KKMNuroo5BGKumklFZq6aWYZqrpppx26umnoIYq6qiklmrqqaimquqqrLbq6quwxirrrLTWauutuOaq66689urrr8AGK+ywxBZr7LHIJqvsssw26+yz0EYr7bTUVmvttdhmq+223Hbr7bfghivuuOSWa+656Kar7rrstuvuu/DGK++89NZr77345qvvvvz26++/AAcs8MAEF2zwwQgnrPDCDDfs8MMQRyzxxBRXbPHFGGes8cYcd+zxxyCHLPLIJJds8skop6zyyiy37PLLMMcs88w012zzzTjnrPPOPPfs889ABy300EQXbfTRSCet9NJMN+3001BHLfXUVFdt9dVYZ6311lx37fXXYIct9thkl2322WinrfbabLft9ttwxy333HTXbffdeOet99589+3334AHLvjghBdu+OGIJ6744ow37vjjkEcu+eSUV2755ZhnrvnmnHfu+eeghy766KSXbvrpqKeu+uqst+7667DHLvvstNdu++2456777rz37vvvwAcv/PDEF2/88cgnr/zyzDfv/PPQRy/99NRXb/312Gev/fbcd+/99+CHL/745Jdv/vnop6/++uy37/778Mcv//z012///fjnr//+/Pfv//8BCzCA">
         <br><br>
     </div>
     
     <marquee class="marquee" behavior="scroll" direction="left">
         ★☆★ このサイトは工事中です Under Construction ★☆★ 新着情報をお見逃しなく！！ ★☆★
     </marquee>
+    
+    <!-- 更新履歴ティッカー -->
+    <div class="ticker">
+        <div class="ticker-content">
+            【最新情報】1999/12/31 キリ番機能追加 ★ 1999/12/25 クリスマス仕様に変更 ★ 1999/12/20 MIDI音楽追加 ★ 1999/12/15 ゲストブック開設 ★ 1999/12/10 BBS開設
+        </div>
+    </div>
     
     <div class="counter-box">
         <span class="blink">★</span> あなたは <span id="counter" style="color: #FF0000; font-size: 18px;">00000001</span> 人目の訪問者です <span class="blink">★</span>
@@ -129,6 +231,65 @@
         <strong>更新内容:</strong> カウンター設置、キリ番機能追加
     </div>
     
+    <!-- Weather Widget -->
+    <div class="weather-widget">
+        <div class="blink">☀</div>
+        <strong>今日の天気:</strong> 晴れ時々曇り | 気温: 15℃ | 湿度: 65%
+        <div style="font-size: 10px;">※ 1999年12月31日現在</div>
+    </div>
+    
+    <!-- BBS Section -->
+    <div class="bbs-section">
+        <h3>📋 むなかたBBS（掲示板）</h3>
+        <p>みなさんの書き込みお待ちしています！</p>
+        <table border="1" cellpadding="5" cellspacing="0" style="width:100%; background:#004040;">
+            <tr style="background:#006060; color:#FFFFFF;">
+                <td width="80"><strong>名前</strong></td>
+                <td width="120"><strong>日時</strong></td>
+                <td><strong>メッセージ</strong></td>
+            </tr>
+            <tr>
+                <td>ゲスト</td>
+                <td>99/12/31 23:59</td>
+                <td>ホームページ拝見させていただきました！とても素敵ですね✨</td>
+            </tr>
+            <tr>
+                <td>通りすがり</td>
+                <td>99/12/30 18:30</td>
+                <td>キリ番ゲットしました〜♪ ありがとうございます！</td>
+            </tr>
+            <tr>
+                <td>リンク希望</td>
+                <td>99/12/29 14:20</td>
+                <td>相互リンクしませんか？ メールお待ちしています</td>
+            </tr>
+        </table>
+        <div style="text-align:center; margin-top:10px;">
+            <a href="#" style="color:#00FFFF;">[新規書き込み]</a> | 
+            <a href="#" style="color:#00FFFF;">[過去ログ]</a> | 
+            <a href="#" style="color:#00FFFF;">[管理者削除]</a>
+        </div>
+    </div>
+    
+    <!-- Guestbook Section -->
+    <div class="guestbook-section">
+        <h3>📖 ゲストブック</h3>
+        <p>ご訪問の記念に一言どうぞ！</p>
+        <div style="border:1px solid #FF6666; background:#400000; padding:10px; margin:10px 0;">
+            <strong>★ なまえ:</strong> 初訪問者さん<br>
+            <strong>★ ひとこと:</strong> 初めて訪問しました！90年代懐かしいです〜<br>
+            <strong>★ じかん:</strong> 1999年12月31日 23:45<br>
+        </div>
+        <div style="border:1px solid #FF6666; background:#400000; padding:10px; margin:10px 0;">
+            <strong>★ なまえ:</strong> ホームページ巡回中<br>
+            <strong>★ ひとこと:</strong> GIFアニメがキラキラしてて綺麗ですね！<br>
+            <strong>★ じかん:</strong> 1999年12月30日 20:15<br>
+        </div>
+        <div style="text-align:center; margin-top:10px;">
+            <a href="#" style="color:#FFFF99;">[ゲストブックに書き込む]</a>
+        </div>
+    </div>
+    
     <div class="link-section">
         <h3>★ お気に入りリンク集 ★</h3>
         <ul>
@@ -140,13 +301,41 @@
         </ul>
     </div>
     
+    <!-- WebRing Navigation -->
+    <div class="webring-section">
+        <h3>🔗 むなかたウェブリング</h3>
+        <p>個人サイト同士でつながろう！</p>
+        <div style="border:1px solid #0080FF; padding:5px; margin:5px 0;">
+            [<a href="#" style="color:#00FFFF;">前のサイト</a>] - 
+            [<a href="#" style="color:#00FFFF;">ランダム</a>] - 
+            [<a href="#" style="color:#00FFFF;">次のサイト</a>] - 
+            [<a href="#" style="color:#00FFFF;">一覧</a>]
+        </div>
+        <div style="font-size:10px;">このウェブリングには現在 127 のサイトが参加しています</div>
+    </div>
+    
+    <!-- Deputy Admin Recruitment -->
+    <div class="deputy-admin">
+        <h3 class="blink">🌟 副管理人募集中！ 🌟</h3>
+        <p>このホームページを一緒に盛り上げてくれる副管理人を募集しています！</p>
+        <p><strong>応募条件:</strong></p>
+        <ul style="text-align:left; display:inline-block;">
+            <li>HTML/CSSの基本知識がある方</li>
+            <li>週2〜3回更新できる方</li>
+            <li>掲示板の管理ができる方</li>
+            <li>楽しいコンテンツを考えられる方</li>
+        </ul>
+        <p>ご興味のある方は<a href="mailto:munakata@example.com" style="color:#FFFF99;">メール</a>でご連絡ください！</p>
+    </div>
+    
     <hr>
     
     <div class="center">
         <p>このサイトは<span class="blink">Netscape Navigator 4.0</span>で最適化されています</p>
         <p style="font-size: 12px;">
-            Copyright © 1999 Nancy's Homepage. All rights reserved.<br>
-            このサイトの無断転載を禁じます
+            Copyright © 1999 むなかた's Homepage. All rights reserved.<br>
+            このサイトの無断転載を禁じます<br>
+            <a href="https://discord.gg/7VUSarRZfa" class="hidden-link">ひみつのへや</a>
         </p>
     </div>
 
