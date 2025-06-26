@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>★☆ ようこそ！！ナンシーのホームページへ ☆★</title>
+    <style>
+        body {
+            background: #000080;
+            background-image: url('data:image/gif;base64,R0lGODlhEAAQAPIAAAAAAP///8zMzJmZmWZmZjMzMwAAAAAAACH5BAkKAAEALAAAAAAQABAAAAMjGLrc/jDKSVe4OOvNu/9gKI5kaZ5oqq5s675wLM90bd94ru+8/w8MCofEovGITCqXzKbzCY1Kp9Sq9YrNarfcrvcLDovH5LL5jE6r1+y2+w2Py+f0uv2Oz+v3/L7/DxgoOEhYaHiImKi4yNjo+AgZKTlJWWl5iZmpucnZ6fkJGio6SlpqeoqaqrrK2ur6ChsrO0tba3uLm6u7y9vr+wscLDxMXGx8jJysvMzc7PwMHS09TV1tfY2drb3N3e39DR4uPk5ebn6Onq6+zt7u/g4fLz9PX29/j5+vv8/f7/8PMKDAgQQLDhxIsKDBgwgTKlzIsKHDhxAjSpxIsaLFixgzJgAAOw==');
+            color: #FFFF00;
+            font-family: "MS Gothic", monospace;
+            margin: 0;
+            padding: 10px;
+        }
+        
+        .blink {
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        .marquee {
+            background: #FF0000;
+            color: #FFFFFF;
+            padding: 5px;
+            margin: 10px 0;
+        }
+        
+        .construction {
+            color: #FFFF00;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .counter-box {
+            border: 2px solid #FFFF00;
+            background: #008000;
+            color: #FFFFFF;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .kiri-box {
+            border: 2px solid #FF00FF;
+            background: #800080;
+            color: #FFFFFF;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: center;
+        }
+        
+        .link-section {
+            background: #006400;
+            border: 2px solid #00FF00;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        
+        a {
+            color: #00FFFF;
+            text-decoration: underline;
+        }
+        
+        a:visited {
+            color: #FF00FF;
+        }
+        
+        .update-info {
+            background: #800000;
+            border: 1px solid #FF0000;
+            color: #FFFFFF;
+            padding: 5px;
+            margin: 10px 0;
+            font-size: 12px;
+        }
+        
+        hr {
+            border: 1px solid #FFFF00;
+            background: #FFFF00;
+        }
+        
+        .center {
+            text-align: center;
+        }
+        
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h1 class="title blink">★☆ ようこそ！！ナンシーのホームページへ ☆★</h1>
+        <img src="data:image/gif;base64,R0lGODlhZABkAPcAAAAAADMzMzNmZjOZmTPMzDNmMzNmZjNmmTNmzDOZMzOZZjOZmTOZzDPMMzPMZjPMmTPMzGYzAGYzM2YzZmYzmWYzzGZmAGZmM2ZmZmZmmWZmzGaZAGaZM2aZZmaZmWaZzGbMAGbMM2bMZmbMmWbMzJkzAJkzM5kzZpkzmZkzzJlmAJlmM5lmZplmmZlmzJmZAJmZM5mZZpmZmZmZzJnMAJnMM5nMZpnMmZnMzMwzAMwzM8wzZswzmcwzzMxmAMxmM8xmZsxmmcxmzMyZAMyZM8yZZsyZmcyZzMzMAMzMM8zMZszMmczMzP///////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAkKAP8ALAAAAABkAGQAAAj/AP8JHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3Mixo8ePIEOKHEmypMmTKFOqXMmypcuXMGPKnEmzps2bOHPq3Mmzp8+fQIMKHUq0qNGjSJMqXcq0qdOnUKNKnUq1qtWrWLNq3cq1q9evYMOKHUu2rNmzaNOqXcu2rdu3cOPKnUu3rt27ePPq3cu3r9+/gAMLHky4sOHDiBMrXsy4sePHkCNLnky5suXLmDNr3sy5s+fPoEOLHk26tOnTqFOrXs26tevXsGPLnk27tu3buHPr3s27t+/fwIMLH068uPHjyJMrX868ufPn0KNLn069uvXr2LNr3869u/fv4MOL/x9Pvrz58+jTq1/Pvr379/Djy59Pv779+/jz69/Pv7///wAGKOCABBZo4IEIJqjgggw26OCDEEYo4YQUVmjhhRhmqOGGHHbo4YcghijiiCSWaOKJKKao4oostujiizDGKOOMNNZo44045qjjjjz26OOPQAYp5JBEFmnkkUgmqeSSTDbp5JNQRinllFRWaeWVWGap5ZZcdunll2CGKeaYZJZp5plopqnmmmy26eabcMYp55x01mnnnXjmqeeefPbp55+ABirooIQWauihiCaq6KKMNuroo5BGKumklFZq6aWYZqrpppx26umnoIYq6qiklmrqqaimquqqrLbq6quwxirrrLTWauutuOaq66689urrr8AGK+ywxBZr7LHIJqvsssw26+yz0EYr7bTUVmvttdhmq+223Hbr7bfghivuuOSWa+656Kar7rrstuvuu/DGK++89NZr77345qvvvvz26++/AAcs8MAEF2zwwQgnrPDCDDfs8MMQRyzxxBRXbPHFGGes8cYcd+zxxyCHLPLIJJds8skop6zyyiy37PLLMMcs88w012zzzTjnrPPOPPfs889ABy300EQXbfTRSCet9NJMN+3001BHLfXUVFdt9dVYZ6311lx37fXXYIct9thkl2322WinrfbabLft9ttwxy333HTXbffdeOet99589+3334AHLvjghBdu+OGIJ6744ow37vjjkEcu+eSUV2755ZhnrvnmnHfu+eeghy766KSXbvrpqKeu+uqst+7667DHLvvstNdu++2456777rz37vvvwAcv/PDEF2/88cgnr/zyzDfv/PPQRy/99NRXb/312Gev/fbcd+/99+CHL/745Jdv/vnop6/++uy37/778Mcv//z012///fjnr//+/Pfv//8BCzCA");
+        <br><br>
+    </div>
+    
+    <marquee class="marquee" behavior="scroll" direction="left">
+        ★☆★ このサイトは工事中です Under Construction ★☆★ 新着情報をお見逃しなく！！ ★☆★
+    </marquee>
+    
+    <div class="counter-box">
+        <span class="blink">★</span> あなたは <span id="counter" style="color: #FF0000; font-size: 18px;">00000001</span> 人目の訪問者です <span class="blink">★</span>
+    </div>
+    
+    <div class="kiri-box">
+        <div class="blink">♪♪♪ キリ番情報 ♪♪♪</div>
+        <div id="kiri-info">次のキリ番は 100 番です！</div>
+        <div id="kiri-message" style="display: none; color: #FFFF00; font-weight: bold;">
+            ★☆★ おめでとうございます！キリ番ゲットです！！★☆★
+        </div>
+    </div>
+    
+    <hr>
+    
+    <div class="construction center">
+        <span class="blink">🚧 工事中 UNDER CONSTRUCTION 🚧</span>
+    </div>
+    
+    <div class="update-info">
+        <strong>最終更新日:</strong> 1999年12月31日<br>
+        <strong>更新内容:</strong> カウンター設置、キリ番機能追加
+    </div>
+    
+    <div class="link-section">
+        <h3>★ お気に入りリンク集 ★</h3>
+        <ul>
+            <li><a href="#">友達のホームページ</a></li>
+            <li><a href="#">無料素材集</a></li>
+            <li><a href="#">MIDI音楽館</a></li>
+            <li><a href="#">チャット広場</a></li>
+            <li><a href="#">掲示板</a></li>
+        </ul>
+    </div>
+    
+    <hr>
+    
+    <div class="center">
+        <p>このサイトは<span class="blink">Netscape Navigator 4.0</span>で最適化されています</p>
+        <p style="font-size: 12px;">
+            Copyright © 1999 Nancy's Homepage. All rights reserved.<br>
+            このサイトの無断転載を禁じます
+        </p>
+    </div>
+
+    <script>
+        // 足跡カウンター機能
+        function updateCounter() {
+            let count = localStorage.getItem('visitCount') || 0;
+            count = parseInt(count) + 1;
+            localStorage.setItem('visitCount', count);
+            
+            // カウンターの表示を8桁の数字にフォーマット
+            const counterElement = document.getElementById('counter');
+            counterElement.textContent = count.toString().padStart(8, '0');
+            
+            // キリ番チェック
+            checkKiriban(count);
+        }
+        
+        // キリ番機能
+        function checkKiriban(count) {
+            const kiriNumbers = [100, 200, 300, 400, 500, 777, 1000, 1111, 2000, 3000, 5000, 7777, 10000];
+            const kiriInfo = document.getElementById('kiri-info');
+            const kiriMessage = document.getElementById('kiri-message');
+            
+            if (kiriNumbers.includes(count)) {
+                kiriMessage.style.display = 'block';
+                kiriInfo.innerHTML = `おめでとうございます！${count}番キリ番ゲットです！！`;
+                
+                // 効果音的な演出（ページタイトルを点滅）
+                let blinkCount = 0;
+                const originalTitle = document.title;
+                const blinkInterval = setInterval(() => {
+                    document.title = blinkCount % 2 === 0 ? '★☆ キリ番ゲット！！ ☆★' : originalTitle;
+                    blinkCount++;
+                    if (blinkCount > 10) {
+                        clearInterval(blinkInterval);
+                        document.title = originalTitle;
+                    }
+                }, 500);
+            } else {
+                // 次のキリ番を表示
+                const nextKiri = kiriNumbers.find(num => num > count) || kiriNumbers[kiriNumbers.length - 1] + 1000;
+                kiriInfo.innerHTML = `次のキリ番は <span style="color: #FFFF00; font-weight: bold;">${nextKiri}</span> 番です！`;
+            }
+        }
+        
+        // ページ読み込み時にカウンター更新
+        window.onload = function() {
+            updateCounter();
+        };
+    </script>
+</body>
+</html>
